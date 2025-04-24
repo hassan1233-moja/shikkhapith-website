@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shikkhapith Admin Dashboard</title>
+  <link rel="stylesheet" href="admin.css">
+</head>
+<body>
+  <header>
+    <h1>Shikkhapith অ্যাডমিন ড্যাশবোর্ড</h1>
+  </header>
+
+  <nav>
+    <ul>
+      <li><button onclick="showPanel('course')">কোর্স যুক্ত করুন</button></li>
+      <li><button onclick="showPanel('download')">ডাউনলোড ফাইল যুক্ত করুন</button></li>
+      <li><button onclick="showPanel('video')">ভিডিও/লাইভ ক্লাস যুক্ত করুন</button></li>
+      <li><button onclick="showPanel('nav')">ন্যাভিগেশন আপডেট</button></li>
+    </ul>
+  </nav>
+
+  <main>
+    <section id="course" class="panel">
+      <h2>নতুন কোর্স যুক্ত করুন</h2>
+      <form>
+        <input type="text" placeholder="কোর্সের নাম" required>
+        <input type="text" placeholder="বিষয়" required>
+        <textarea placeholder="কোর্সের বিবরণ"></textarea>
+        <button type="submit">যুক্ত করুন</button>
+      </form>
+    </section>
+
+    <section id="download" class="panel" style="display:none">
+      <h2>ডাউনলোড ফাইল আপলোড করুন</h2>
+      <form>
+        <input type="text" placeholder="টাইটেল" required>
+        <input type="file">
+        <button type="submit">আপলোড</button>
+      </form>
+    </section>
+
+    <section id="video" class="panel" style="display:none">
+      <h2>ভিডিও/লাইভ ক্লাস যুক্ত করুন</h2>
+      <form>
+        <input type="text" placeholder="ভিডিও শিরোনাম" required>
+        <input type="url" placeholder="YouTube লিংক" required>
+        <button type="submit">যুক্ত করুন</button>
+      </form>
+    </section>
+
+    <section id="nav" class="panel" style="display:none">
+      <h2>ন্যাভিগেশন মেনু আপডেট</h2>
+      <form>
+        <input type="text" placeholder="নতুন লিংক টাইটেল" required>
+        <input type="text" placeholder="লিংক আইডি (যেমন: course, home)" required>
+        <button type="submit">যুক্ত করুন</button>
+      </form>
+    </section>
+
+    <!-- Logout Button for Admin -->
+    <button onclick="logout()">Logout</button>
+  </main>
+
+  <script>
+    // logout ফাংশন
+    function logout() {
+      // localStorage থেকে admin status মুছে ফেলুন
+      localStorage.removeItem('isAdmin');
+      // লগআউটের পর ব্যবহারকারীকে login page-এ নিয়ে যান
+      window.location.href = 'login.html'; // এখানে 'login.html' এর পথ অনুযায়ী দিবে
+    }
+
+    // যখন admin page লোড হবে, তখন চেক করা হবে admin status
+    const isAdmin = localStorage.getItem('isAdmin');
+    if (isAdmin !== 'true') {
+      window.location.href = 'login.html'; // যদি admin না হয়, তাহলে login page-এ রিডাইরেক্ট
+    }
+
+    // Panel Switch Function
+    function showPanel(id) {
+      const panels = document.querySelectorAll('.panel');
+      panels.forEach(panel => panel.style.display = 'none');
+      document.getElementById(id).style.display = 'block';
+    }
+  </script>
+  
+  <script src="admin.js"></script>
+</body>
+</html>

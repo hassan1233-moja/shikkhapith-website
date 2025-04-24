@@ -1,0 +1,23 @@
+[
+    {
+      "title": "হোম",
+      "id": "home"
+    },
+    {
+      "title": "কোর্স",
+      "id": "course"
+    },
+    {
+      "title": "ডাউনলোড",
+      "id": "download"
+    },
+    {
+      "title": "ভিডিও",
+      "id": "video"
+    },
+    {
+      "title": "যোগাযোগ",
+      "id": "contact"
+    }
+  ]
+  

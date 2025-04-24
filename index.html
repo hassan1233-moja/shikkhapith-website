@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shikkhapith হোম</title>
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+  <header> 
+    <h1>Shikkhapith</h1> 
+    <p>সবার জন্য উন্মুক্ত অনলাইন শিক্ষা প্ল্যাটফর্ম</p> 
+  </header>
+
+  <nav>
+    <ul id="nav-links">
+      <!-- nav.json থেকে লোড হবে -->
+    </ul>
+  </nav>
+
+  <main>
+    <div class="tabs">
+      <button onclick="showTab('home')" class="tab active">হোম</button>
+      <button onclick="showTab('course')" class="tab">ক্লাস </button>
+      <button onclick="showTab('download')" class="tab">ডাউনলোড</button>
+      <button onclick="showTab('video')" class="tab">লাইভ ক্লাস</button>
+    </div>
+
+    <section id="home" class="tab-content">
+      <h2>WELCOME</h2>
+      <p>Shikkhapith-এ আপনাকে স্বাগতম! এখানে আপনি পাবেন কোর্স, ভিডিও ক্লাস, এবং প্রয়োজনীয় ডাউনলোড সুবিধা।</p>
+    </section>
+
+    <section id="course" class="tab-content" style="display:none">
+      <h2>ক্লাস</h2>
+      <div id="course-list">
+      <!-- যেকোনো section বা content অংশে -->
+      <div id="video-box"></div>
+  
+        <!-- কোর্স লিস্ট JS দিয়ে লোড হবে -->
+      </div>
+    </section>
+
+    <section id="download" class="tab-content" style="display:none">
+      <h2>ডাউনলোড সেকশন</h2>
+      <div id="download-list">
+        <!-- ডাউনলোড ফাইল JS দিয়ে লোড হবে -->
+      </div>
+    </section>
+
+    <section id="video" class="tab-content" style="display:none">
+      <h2>লাইভ ক্লাস / ভিডিও</h2>
+      <div id="video-list">
+        <!-- ভিডিও লিস্ট JS দিয়ে লোড হবে -->
+      </div>
+    </section>
+
+    <section id="login" class="section">
+      <h2>রেজিস্ট্রেশন / লগইন</h2>
+      <form id="login-form">
+        <input type="text" placeholder="ফোন নাম্বার" required>
+        <input type="password" placeholder="পাসওয়ার্ড" required>
+        <button type="submit">লগইন</button>
+      </form>
+    </section>
+
+    <section id="contact" class="section">
+      <h2>যোগাযোগ করুন</h2>
+      <form id="contact-form">
+        <input type="text" placeholder="আপনার নাম" required>
+        <input type="email" placeholder="ইমেইল" required>
+        <textarea placeholder="বার্তা"></textarea>
+        <button type="submit">পাঠান</button>
+      </form>
+    </section>
+
+    <section id="admin" class="section">
+      <h2>অ্যাডমিন ড্যাশবোর্ড</h2>
+      <p><a href="admin.html">এখানে ক্লিক করুন অ্যাডমিন প্যানেল দেখতে</a></p>
+    </section>
+</section>
+  <footer>
+    <p>&copy; 2025 Shikkhapith. সর্বস্বত্ব সংরক্ষিত।</p>
+  </footer>
+
+  <script>
+    function showTab(id) {
+      const contents = document.querySelectorAll('.tab-content');
+      const tabs = document.querySelectorAll('.tab');
+      contents.forEach(c => c.style.display = 'none');
+      tabs.forEach(t => t.classList.remove('active'));
+      document.getElementById(id).style.display = 'block';
+      document.querySelector(`.tab[onclick="showTab('${id}')"]`).classList.add('active');
+    }
+  </script>
+  <script src="index.js"></script>
+</body>
+</html>
