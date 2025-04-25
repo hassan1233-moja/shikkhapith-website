@@ -25,20 +25,20 @@ function loadCourseList() {
   const classSubjects = {
     '৬ষ্ঠ শ্রেণি': [
       { subject: 'বাংলা', videos: [
-        { title: 'Part 1', url: src="https://www.youtube.com/embed/pBpsf5bTG9w" },
-        { title: 'Part 2', url: src="https://www.youtube.com/embed/Pc3F_9u8lwQ" }
+        { title: 'lasson1 part=1', url: src="https://www.youtube.com/embed/pBpsf5bTG9w" },
+        { title: 'part 2', url: src="https://www.youtube.com/embed/Pc3F_9u8lwQ" }
       ]},
-      { subject: 'ইংরেজি', videos: [
-        { title: 'Lesson 1', url: 'https://www.youtube.com/embed/videoID3' },
-        { title: 'Lesson 2', url: 'https://www.youtube.com/embed/videoID4' }
+      { subject: 'ইংরেজি grammer', videos: [
+        { title: 'Lesson1 part=1', url: src="https://www.youtube.com/embed/KPQUH5vhahI" },
+        { title: 'part 2', url: src="https://www.youtube.com/embed/rdNZwL4BGwA" }
       ]},
       { subject: 'গণিত', videos: [
-        { title: 'Lesson 1', url: 'https://www.youtube.com/embed/videoID5' },
-        { title: 'Lesson 2', url: 'https://www.youtube.com/embed/videoID6' }
+        { title: 'Lesson1 part=1', url: src="https://www.youtube.com/embed/E4Yftb6Kpsk" },
+        { title:  'part 2', url: src="https://www.youtube.com/embed/UuP7UIh_kOQ" }
       ]},
       { subject: 'বিজ্ঞান', videos: [
-        { title: 'Part 1', url: 'https://www.youtube.com/embed/videoID7' },
-        { title: 'Part 2', url: 'https://www.youtube.com/embed/videoID8' }
+        { title: 'Lesson1 part=1', url: src="https://www.youtube.com/embed/Oxkny5tz0Eo" },
+        { title: 'Part 2', url: src=src="https://www.youtube.com/embed/EoKImEZMksY" }
       ]}
     ],
     '৭ম শ্রেণি': [
@@ -79,12 +79,12 @@ function loadCourseList() {
     ],
     '৯ম শ্রেণি': [
       { subject: 'গণিত', videos: [
-        { title: 'Lesson 1', url: 'https://www.youtube.com/embed/videoID25' },
-        { title: 'Lesson 2', url: 'https://www.youtube.com/embed/videoID26' }
+        { title: 'Lesson 1 part=1', url: src="https://www.youtube.com/embed/JZGcQBSAQD4" },
+        { title: 'part2', url: src="https://www.youtube.com/embed/7H738Eyfae0" }
       ]},
       { subject: 'রসায়ন', videos: [
-        { title: 'Lesson 1', url: 'https://www.youtube.com/embed/videoID27' },
-        { title: 'Lesson 2', url: 'https://www.youtube.com/embed/videoID28' }
+        { title: 'Lesson 1 part=1', url: src="https://www.youtube.com/embed/OdrCOGY-7EE" },
+        { title: 'part 2', url: src="https://www.youtube.com/embed/wJ41qWNUnqs"}
       ]},
       { subject: 'জীববিজ্ঞান', videos: [
         { title: 'Part 1', url: 'https://www.youtube.com/embed/videoID29' },
@@ -94,7 +94,7 @@ function loadCourseList() {
         { title: 'Lesson 1', url: 'https://www.youtube.com/embed/videoID31' },
         { title: 'Lesson 2', url: 'https://www.youtube.com/embed/videoID32' }
       ]},
-      { subject: 'ইংরেজি', videos: [
+      { subject: 'ইংরেজি grammer', videos: [
         { title: 'Lesson 1', url: 'https://www.youtube.com/embed/videoID33' },
         { title: 'Lesson 2', url: 'https://www.youtube.com/embed/videoID34' }
       ]}
